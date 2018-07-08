@@ -4,10 +4,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
