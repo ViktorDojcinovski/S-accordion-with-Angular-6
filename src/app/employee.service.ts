@@ -7,6 +7,8 @@ import { Injectable } from '@angular/core';
   export interface Section {
     name: string;
     position: string;
+    phone: string;
+    email: string;
     score: number;
   }
 
@@ -25,12 +27,16 @@ export class EmployeeService {
       {
         name: 'John Smith',
         position: 'Sales Representative',
-        score: 20,
+        phone: '+9728888888',
+        email: 'john@email.com',
+        score: 5,
       },
       {
-        name: 'John Smith',
+        name: 'John Aerosmith',
         position: 'Sales Representative',
-        score: 20,
+        phone: '+9728888888',
+        email: 'john@email.com',
+        score: 5,
       }
     ];
 

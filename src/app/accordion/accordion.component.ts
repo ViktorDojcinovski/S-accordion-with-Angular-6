@@ -28,7 +28,7 @@ export class AccordionComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
 
-    this.items = this.elementRef.nativeElement.querySelectorAll('.list-item');
+    this.items = this.elementRef.nativeElement.querySelectorAll('.list-group-item');
     this.item_headings = this.elementRef.nativeElement.querySelectorAll('.list-item-heading');
     this.show_less_btns = this.elementRef.nativeElement.querySelectorAll('.show-less');
     this.addListenersHeadings();
@@ -55,16 +55,16 @@ export class AccordionComponent implements OnInit, AfterViewInit {
   toggleMetaDescription(event) {
     const itemClass = event.currentTarget.parentNode.className;
     for (let i = 0; i < this.items.length; i++) {
-      this.items[i].className = 'list-item close';
+      this.items[i].className = 'list-group-item s-close';
     }
-    if (itemClass === 'list-item close') {
-        event.currentTarget.parentNode.className = 'list-item open';
+    if (itemClass === 'list-group-item s-close') {
+        event.currentTarget.parentNode.className = 'list-group-item s-open';
         event.currentTarget.removeEventListener('click', this.toggleMetaDescription.bind(this), false);
     }
   }
 
   showLessFunc(event) {
-    event.currentTarget.parentNode.parentNode.className = 'list-item close';
+    event.currentTarget.parentNode.parentNode.className = 'list-group-item s-close';
   }
 }
 

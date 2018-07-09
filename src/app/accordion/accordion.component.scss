@@ -1,0 +1,92 @@
+/* Media devices  */
+
+    $smaller-than-17-inch: "only screen and (max-width : 1366px)";
+    $smaller-than-15-inch: "only screen and (max-width : 1280px)";
+    $larger-than-lg: "only screen and (min-width : 1200px)";
+    $larger-than-md: "only screen and (min-width : 992px)";
+    $larger-than-sm: "only screen and (min-width : 768px)";
+    $larger-than-xs: "only screen and (min-width : 576px)";
+    $ipad-landscape: "only screen and (max-width : 1024px)";
+    $ipad-portrait: "only screen and (max-width : 768px)";
+    $handheld: "only screen and (max-width : 480px)";
+
+/* clearfix */
+
+    %clearfix {
+        &:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+
+
+#accordion-section {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 600px;
+    @media #{$handheld} {
+        width: 100%;
+    }
+    .show-less {
+        display: block;
+        float: left;
+        pointer-events: all;
+        cursor: pointer;
+    }
+    .list-item-heading {
+        @extend %clearfix;
+        span:nth-child(1) {
+            padding: 5px 10px;  
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            margin-right: 20px;
+            font-size: 15px;
+            line-height: 20px;
+            width: auto;
+            height: auto;
+            float: left;
+        }
+        span:nth-child(2) {
+            margin-right: 20px; 
+            width: 30%;
+            display: inline-block;
+            float: left;
+            overflow: hidden;
+            line-height: 30px;
+        }
+        span:nth-child(3) {
+            display: inline-block;
+            float: left;
+            line-height: 30px;
+        }
+    }
+    .s-close  {
+        .list-item-meta{
+            display:block;
+            height:0px;
+            float:left;
+            transform: scaleY(0);
+
+            /* transitions */
+            transition:height 0.4s ease-out;
+        }
+    }
+    .s-open {
+        .list-item-meta {
+            margin: 20px 0px 10px 0px;
+            padding-top: 10px;
+            display:block;
+            background-color: #fff;
+            width: 100%;
+            height: 50px;
+            transform: scaleY(1);
+            transform-origin: top;
+            box-sizing: border-box;
+
+            /* transitions */
+            transition:height 0.4s ease-in;
+            transition: transform 0.4s ease;
+        }
+    }    
+}
