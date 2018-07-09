@@ -1,5 +1,9 @@
 # SourcicoAccordion
 
+To see the rudimented version of an accordion UI, please use the accordion path. For convenience the app routes with redirecting the root to this path.
+
+Also for convenience this app uses Angular MDB Material Theme UI Kit. To visit go to `https://mdbootstrap.com/angular/`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
