@@ -35,7 +35,14 @@ export class EmployeeService {
         name: 'John Aerosmith',
         position: 'Sales Representative',
         phone: '+9728888888',
-        email: 'john@email.com',
+        email: 'john.aerosmith@email.com',
+        score: 5,
+      },
+      {
+        name: 'John Blacksmith',
+        position: 'Sales Representative',
+        phone: '+9728888888',
+        email: 'john.blacksmith@email.com',
         score: 5,
       }
     ];
